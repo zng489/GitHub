@@ -1,0 +1,81 @@
+############################################################################################
+
+$ git config --list
+>> credential.helper=manager-core
+>> diff.astextplain.textconv=astextplain
+>> filter.lfs.clean=git-lfs clean -- %f
+>> filter.lfs.smudge=git-lfs smudge -- %f
+>> filter.lfs.process=git-lfs filter-process
+>> filter.lfs.required=true
+>> http.sslbackend=openssl
+>> http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+>> core.autocrlf=true
+>> core.fscache=true
+>> core.symlinks=false
+>> pull.rebase=false
+>> credential.https://dev.azure.com.usehttppath=true
+>> init.defaultbranch=master
+
+############################################################################################
+
+$ git config --global user.name "Yuan"
+
+############################################################################################
+
+$ git config --global user.name "yuan489@hotmail.com"
+
+############################################################################################
+
+$ cd "C:\Users\Zng\Desktop\Git Hub"
+
+############################################################################################
+$ git init
+>> Initialized empty Git repository in C:/Users/Zng/Desktop/Git Hub/.git/
+
+############################################################################################
+
+$ git status
+>> On branch master
+
+>> No commits yet
+
+>> Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        GitHub.txt
+
+>> nothing added to commit but untracked files present (use "git add" to track)
+
+############################################################################################
+
+$ touch hello_world.py             # CREATING FILES (EMPTY FILES)
+
+############################################################################################
+
+$ ls                                # SEE WHAT KIND OF FILES YOU GOT IT       
+>> GitHub.txt  hello_world.py
+
+############################################################################################
+
+$ git add hello_world.py   # ADDING THE FILES
+
+############################################################################################
+
+$ git status    # CHECKING THE FILES (STATUS)
+
+############################################################################################
+
+$ git commit -m "add files"                     # COMMITED THE FILES
+>> [master (root-commit) 5e69b53] add files
+>>  1 file changed, 0 insertions(+), 0 deletions(-)
+>>  create mode 100644 hello_world.py
+
+############################################################################################
+
+$ git log                                      # LOGGING
+commit 5e69b53aac899d7a8f463a189dee32600c61053d (HEAD -> master)
+Author: zng489 <zhang489@hotmail.com>
+Date:   Sun Mar 7 11:15:51 2021 -0300
+
+    add files
+
+
