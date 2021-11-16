@@ -226,8 +226,71 @@ Date:   Mon Nov 15 22:34:40 2021 -0300
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github/shop (master)
+$ notepad list.txt
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github/shop (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   list.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        lists.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github/shop (master)
+$ git diff
+diff --git a/list.txt b/list.txt
+index e69de29..e8e0963 100644
+--- a/list.txt
++++ b/list.txt
+@@ -0,0 +1,4 @@
++Bananas
++Oranges
++Strawberries
++Apples
+\ No newline at end of file
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github/shop (master)
+$ git add list.txt
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github/shop (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   list.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        lists.txt
 
 
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github/shop (master)
+$ git commit -m 'Add Fruit and Vegetables'
+[master 66a8a39] Add Fruit and Vegetables
+ 1 file changed, 4 insertions(+)
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github/shop (master)
+$ git log
+commit 66a8a39c54ceb24e8d8972603f7ab3e33772027b (HEAD -> master)
+Author: unknown <zhang489@hotmail.com>
+Date:   Tue Nov 16 11:02:56 2021 -0300
+
+    Add Fruit and Vegetables
+
+commit 71f483bfa7c02424a6eb6043ab40957b1156d5b2
+Author: unknown <zhang489@hotmail.com>
+Date:   Mon Nov 15 22:34:40 2021 -0300
+
+    Creating shopping list
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
