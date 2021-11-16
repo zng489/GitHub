@@ -318,4 +318,50 @@ Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github/shop (master)
 $ git checkout HEAD~1 list.txt
 Updated 1 path from b50a881
 ----------------------------------------------------------------------------------------------
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github (master)
+$ git init
+Initialized empty Git repository in C:/Users/Yuan/Desktop/github/.git/
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github (master)
+$ touch list.txt
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github (master)
+$ notepad list.txt
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github (master)
+$ git add list.txt
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   list.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        shop/
+
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github (master)
+$ git diff -staged
+error: invalid option: -staged
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github (master)
+$ git diff --staged
+diff --git a/list.txt b/list.txt
+new file mode 100644
+index 0000000..b2798b0
+--- /dev/null
++++ b/list.txt
+@@ -0,0 +1,2 @@
++zhang
++yuan
+\ No newline at end of file
+
+
 ```
