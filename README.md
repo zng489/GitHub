@@ -294,5 +294,24 @@ Date:   Mon Nov 15 22:34:40 2021 -0300
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github/shop (master)
+$ git diff
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github/shop (master)
+$ git diff --staged
+diff --git a/list.txt b/list.txt
+index e8e0963..52742b5 100644
+--- a/list.txt
++++ b/list.txt
+@@ -1,4 +1,5 @@
+ Bananas
+ Oranges
+ Strawberries
+-Apples
+\ No newline at end of file
++Apples
++zhang
+\ No newline at end of file
+
 
 ```
