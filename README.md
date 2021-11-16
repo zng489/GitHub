@@ -156,5 +156,62 @@ Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github/shop (master)
 $ ls
 list.txt
 
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github/shop (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        list.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
+
+
+
+
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github/shop (master)
+$ git add list.txt
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github/shop (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   list.txt
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github/shop (master)
+$ git commit -m 'Creating shopping list'
+[master (root-commit) 71f483b] Creating shopping list
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 list.txt
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github/shop (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github/shop (master)
+$ git log
+commit 71f483bfa7c02424a6eb6043ab40957b1156d5b2 (HEAD -> master)
+Author: unknown <zhang489@hotmail.com>
+Date:   Mon Nov 15 22:34:40 2021 -0300
+
+    Creating shopping list
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 ```
