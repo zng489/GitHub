@@ -114,5 +114,47 @@ core.editor=notepad
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+# Creating New One Folder
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github
+$ mkdir shop
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github
+$ cd shop
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github/shop
+$ git init
+Initialized empty Git repository in C:/Users/Yuan/Desktop/github/shop/.git/
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github/shop (master)
+$ ls -A
+.git/
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github/shop (master)
+$ cd .git
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github/shop/.git (GIT_DIR!)
+$ ls -A
+HEAD  config  description  hooks/  info/  objects/  refs/
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github/shop/.git (GIT_DIR!)
+$ cd ..
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github/shop (master)
+$ touch lists.txt
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github/shop (master)
+$ rm lists.txt
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github/shop (master)
+$ ls
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github/shop (master)
+$ touch list.txt
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github/shop (master)
+$ ls
+list.txt
+
 
 ```
