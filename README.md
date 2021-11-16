@@ -214,7 +214,7 @@ $ git status
 On branch master
 nothing to commit, working tree clean
 
-##### log (data to identify your files #####
+##### log (data to identify your files) #####
 
 Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github/shop (master)
 $ git log
