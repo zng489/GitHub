@@ -9,6 +9,8 @@ git version 2.33.1.windows.1
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+##### Git Help!!!! #####
+
 Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github
 $ git --help
 usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
@@ -60,38 +62,40 @@ See 'git help git' for an overview of the system.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+##### It will take you to git webpage #####
+
 Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github
 $ git help init
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# Acessing the account!! 
+###### Acessing the account!! #####
 
 Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github
 $ git config --global user.email "zhang489@hotmail.com"
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# Creating file
+##### Creating file #####
 
 Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github
 $ touch test.txt
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# Editing
+###### Editing #####
 
 Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github
 $ git config --global core.editor "notepad"
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# Opening the file
+##### Opening the file #####
 
 Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github
 $ notepad test.txt
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+##### Config List #####
 
 Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github
 $ git config --list
@@ -114,7 +118,7 @@ core.editor=notepad
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# Creating New One Folder
+##### Creating New One Folder (In this case the folder 'shop') #####
 
 Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github
 $ mkdir shop
@@ -122,9 +126,13 @@ $ mkdir shop
 Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github
 $ cd shop
 
+##### Creating git init #####
+
 Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github/shop
 $ git init
 Initialized empty Git repository in C:/Users/Yuan/Desktop/github/shop/.git/
+
+##### Checking the directory #####
 
 Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github/shop (master)
 $ ls -A
@@ -140,11 +148,17 @@ HEAD  config  description  hooks/  info/  objects/  refs/
 Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github/shop/.git (GIT_DIR!)
 $ cd ..
 
+##### Creating Files #####
+
 Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github/shop (master)
 $ touch lists.txt
 
+##### Removing and Deleting Files #####
+
 Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github/shop (master)
 $ rm lists.txt
+
+##### Checking the directory #####
 
 Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github/shop (master)
 $ ls
@@ -152,13 +166,17 @@ $ ls
 Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github/shop (master)
 $ touch list.txt
 
+##### Checking the directory in the shop folder #####
+
 Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github/shop (master)
 $ ls
 list.txt
 
+##### Git Status #####
+
 Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github/shop (master)
 $ git status
-On branch master
+lsOn branch master
 
 No commits yet
 
@@ -168,11 +186,9 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-
-
-
+##### Adding your file #####
 
 Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github/shop (master)
 $ git add list.txt
@@ -197,6 +213,8 @@ Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github/shop (master)
 $ git status
 On branch master
 nothing to commit, working tree clean
+
+##### log (data to identify your files #####
 
 Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github/shop (master)
 $ git log
