@@ -77,4 +77,11 @@ $ git config --global user.email "zhang489@hotmail.com"
 Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github
 $ touch test.txt
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github
+$ git config --global core.editor "notepad"
+
+
+
 ```
