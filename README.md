@@ -410,8 +410,33 @@ Fast-forward
  
  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github (master)
+$ git help remote
 
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github (master)
+$ git remote add origin https://.....
 
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github (master)
+$ git remote -v
+origin https://..... (fetch)
+origin https://..... (push)
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github (master)
+$ git push origin master
+
+-----------------------------------------------------------------------
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github (master)
+$ cd..
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github (master)
+$ mkdir imaging_data/
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github (master)
+$ cd imaging_data/
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github (master)
+$ git clone https://....
 
 
 
