@@ -363,5 +363,56 @@ index 0000000..b2798b0
 +yuan
 \ No newline at end of file
 
+---------------------------------------
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github (master)
+$ git brach dairy
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github (master)
+$ git brach 
+  dairy
+* master
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github (master)
+$ git brach meat
+  dairy
+* master
+  meat
+  
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github (master)
+$ git checkout dairy
+Switched to brach 'dairy'
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github (master)
+$ notapad list.txt
+  
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github (master)
+$ notapad list.txt
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github (master)
+$ git add list.txt
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github (master)
+$ git commit -m 'Update'
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github (dairy)
+$ git checkout master
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github (master)
+$ git checkout meat
+Switched to branch 'meat'
+
+Yuan@DESKTOP-G41O7CK MINGW64 ~/Desktop/github (master)
+$ git merge meat
+Updatind 940e4..
+Fast-forward
+ list.txt | 5 +++++
+ 1 file changed, 5 insertions(+)
+ 
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
 
 ```
