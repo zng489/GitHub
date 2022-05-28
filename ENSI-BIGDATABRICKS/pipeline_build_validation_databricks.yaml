@@ -1,0 +1,56 @@
+# Starter pipelincrawlere
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+# About conditions: https://docs.microsoft.com/en-us/azure/devops/pipelines/process/conditions?view=azure-devops&tabs=yaml
+# TIP: disable 'enable Continuous Integration' on pipeline trigger options so this pipeline won't run after every merge.
+
+trigger:
+- main
+- dev
+
+variables:
+- name: report_file
+  value: pre_build_report
+
+pool:
+  vmImage: ubuntu-latest
+
+jobs:
+- job: SearchUndesiredStringPatterns
+  steps:
+  - bash: |
+      echo 'Branches-> source: '$(System.PullRequest.SourceBranch)', target: '$(System.PullRequest.TargetBranch)
+      echo 'Active branch in build: '$(Build.SourceBranch)
+      BRANCH_SOURCE='origin/'$(echo $(System.PullRequest.SourceBranch) | awk -F '/' '{print $NF}')
+      BRANCH_TARGET='origin/'$(echo $(System.PullRequest.TargetBranch) | awk -F '/' '{print $NF}')
+      
+      echo 'Modified python files:'
+      git diff --name-only $BRANCH_TARGET $BRANCH_SOURCE -- | grep -E '.*\.py$'
+      echo '=========='
+      # Compare only differences in python files
+      echo '-- Modifications list' >> $(report_file)
+      for i in $(git diff --name-only $BRANCH_TARGET $BRANCH_SOURCE --| grep -E '.*\.py$');
+      do
+        echo 'Searching in file: '$i
+        echo '-- '$i >> $(report_file);
+        # Insert the undesired pattern here
+        cat $i | grep -E -n '(\/dev|\/raw|\/trs|\/biz|\/stg)' >> $(report_file);
+        echo '-- Done';
+      done
+      echo 'Finished'
+    displayName: Get file differences and ocurrences of undesired string pattern
+  - bash: |
+      cat $(report_file)
+    displayName: Display results of undesired string pattern search
+  - bash: |
+      STR_OCCURRENCES=$(cat $(report_file) | grep -E '^[0-9]{1,6}:' | wc -l)
+      echo Undesired string ocurrences: $STR_OCCURRENCES
+      if [ $STR_OCCURRENCES -ne 0 ]
+      then
+        1>&2 echo 'Failed'
+      else
+        echo 'Succeeded'
+      fi
+    failOnStderr: true
+    displayName: Count undesired string ocurrences and fail if has errors

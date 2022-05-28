@@ -1,0 +1,56 @@
+trigger:
+- master
+
+variables:
+- group: cnibigdatabricks
+
+pool:
+  vmImage: ubuntu-latest
+
+stages:
+- stage: copyToWorkspaceDev
+  displayName: Copy Notebooks to Databricks Workspace - Production
+  jobs:
+  - job: copyNotebooksToDatabricksWorkspace
+    condition: succeeded()
+    strategy:
+      matrix:
+        Python38:
+          PYTHON_VERSION: '3.8'
+    continueOnError: false
+    workspace:
+      clean: all
+    timeoutInMinutes: 20
+    steps:
+    - bash: |
+        # Install Databricks CLI
+        echo "===== Installing Databricks CLI ====="
+        sudo pip install databricks-cli
+        DBCFG=/opt/databrickscfg
+        echo "[DEFAULT]" >> $DBCFG
+        echo "host = $(DATABRICKS_HOST)" >> $DBCFG
+        echo "token = $(DATABRICKS_TOKEN)" >> $DBCFG
+        export DATABRICKS_CONFIG_FILE=$DBCFG
+        echo "===== Test Databricks CLI: Listing clusters ====="
+        databricks clusters list
+        
+        
+        FOLDER_KEYRUS=$(DATABRICKS_FOLDER_ROOT_KEYRUS)/$(DATABRICKS_FOLDER_PROD)
+        FOLDER_KEYRUS_DT=$FOLDER_KEYRUS/$(DATABRICKS_REPO_FOLDER_DATA_TRANSFORMATION)
+        FOLDER_KEYRUS_UTILS=$FOLDER_KEYRUS/$(DATABRICKS_REPO_FOLDER_UTILS)
+        
+        echo "===== Copying 'data transformation' files to Databricks Workspace dir: $FOLDER_KEYRUS =====";
+        databricks workspace import_dir --overwrite --exclude-hidden-files .$(DATABRICKS_FOLDER_ROOT_KEYRUS)/$(DATABRICKS_REPO_FOLDER_DATA_TRANSFORMATION) $FOLDER_KEYRUS
+        echo "===== Copying 'utils' files to Databricks Workspace dir: $FOLDER_KEYRUS =====";
+        # When in PROD, utils are in root level.
+        databricks workspace import_dir --overwrite --exclude-hidden-files .$(DATABRICKS_FOLDER_ROOT_KEYRUS)/$(DATABRICKS_REPO_FOLDER_UTILS) $(DATABRICKS_FOLDER_ROOT_KEYRUS)/$(DATABRICKS_REPO_FOLDER_UTILS)
+
+        FOLDER_STI=$(DATABRICKS_FOLDER_ROOT_STI_INTELIGENCIA)/$(DATABRICKS_FOLDER_PROD)
+        echo "===== Copying 'data_transformation' files to Databricks Workspace dir: $FOLDER_STI =====";
+        databricks workspace import_dir --overwrite --exclude-hidden-files .$(DATABRICKS_FOLDER_ROOT_STI_INTELIGENCIA)/$(DATABRICKS_REPO_FOLDER_DATA_TRANSFORMATION) $FOLDER_STI
+        echo "===== Copying 'utils' files to Databricks Workspace dir: $FOLDER_STI =====";
+        # When in prod, utils are in root level.
+        databricks workspace import_dir --overwrite --exclude-hidden-files .$(DATABRICKS_FOLDER_ROOT_STI_INTELIGENCIA)/$(DATABRICKS_REPO_FOLDER_UTILS) $(DATABRICKS_FOLDER_ROOT_STI_INTELIGENCIA)/$(DATABRICKS_REPO_FOLDER_UTILS)
+
+      displayName: CopyNotebooksToDBFS
+      failOnStderr: true
