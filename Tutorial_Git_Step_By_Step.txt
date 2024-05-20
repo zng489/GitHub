@@ -38,4 +38,9 @@ From https://github.com/zng489/GitHub
 
 >> git commit -m "your commit"
 
+>> If you wanna it
+>> git checkout -b <new_branch_name>
+
 >> git push <remote_name> <local_branch_name>:<remote_branch_name>
+>> git push origin master:master
+>> git push origin new_branch:master
