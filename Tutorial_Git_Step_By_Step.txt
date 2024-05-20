@@ -1,16 +1,25 @@
-git init
-git config --global user.email "zhang489@hotmail.com"
-git config --global user.password "28github"
-git clone https://github.com/zng489/GitHub.git
+# git init
+
+# git config --global user.email "zhang489@hotmail.com"
+
+# git config --global user.password "28github"
+
+# git clone https://github.com/zng489/GitHub.git
+
+# git branch
+
+# git checkout -b <new_branch_name>
+
+# git status
+
+# git add .
+
+# git commit -m "your commit"
+
+# git push -u origin branch_testing
 
 
-git branch
-git checkout -b <new_branch_name>
-git status
-git add .
-git commit -m "your commit"
 
-git push -u origin branch_testing
 
 
 >> git init
