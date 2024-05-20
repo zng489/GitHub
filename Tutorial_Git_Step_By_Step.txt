@@ -1,0 +1,41 @@
+git init
+git config --global user.email "zhang489@hotmail.com"
+git config --global user.password "28github"
+git clone https://github.com/zng489/GitHub.git
+
+
+git branch
+git checkout -b <new_branch_name>
+git status
+git add .
+git commit -m "your commit"
+
+git push -u origin branch_testing
+
+
+>> git init
+
+>> git config --global user.email "zhang489@hotmail.com"
+
+>> git config --global user.password "28github"
+
+>> git remote add origin https://github.com/zng489/GitHub.git
+
+>> git fetch origin
+From https://github.com/zng489/GitHub
+ * [new branch]      branch_testing -> origin/branch_testing
+ * [new branch]      master         -> origin/master
+ * [new branch]      origin         -> origin/origin
+ * [new branch]      uniepro        -> origin/uniepro
+
+>> git pull origin branch_testing
+>> git pull origin master
+>> git pull origin <branch name>
+
+>> git status
+
+>> git add .
+
+>> git commit -m "your commit"
+
+>> git push <remote_name> <local_branch_name>:<remote_branch_name>
