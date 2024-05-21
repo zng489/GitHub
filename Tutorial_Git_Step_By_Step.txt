@@ -53,3 +53,20 @@ From https://github.com/zng489/GitHub
 >> git push <remote_name> <local_branch_name>:<remote_branch_name>
 >> git push origin master:master
 >> git push origin new_branch:master
+
+
+
+git inti
+git config --global user.email "zhang489@hotmail.com"
+git config --global user.password "##github"
+
+# For remote branches
+git remote add [origin]https://github.com/zng489/GitHub.git
+git fetch [origin]
+git remote show 
+git pull [origin] [main]
+git status
+git add .
+
+git commit -m "testing"
+git push [origin] [master]:[main]
