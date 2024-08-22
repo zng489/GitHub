@@ -51,6 +51,7 @@ From https://github.com/zng489/GitHub
 >> git checkout -b <new_branch_name>
 
 >> git push <remote_name> <local_branch_name>:<remote_branch_name>
+>> git push --force origin master /sniper-frontend-develop (master) :main (git)
 >> git push origin master:master
 >> git push origin new_branch:master
 
