@@ -72,3 +72,27 @@ git add .
 
 git commit -m "testing"
 git push [origin] [master]:[main]
+
+
+
+
+
+
+>> $ git init
+>> $ git config --global user.email "zhang489@hotmail.com"
+>> $ git config --global user.password "28github"
+>> $ git remote add branch_named https://github.com/zng489/azure_blob_storage
+>> $ git fetch branch_named
+>> $ git pull branch_named main
+>> From https://github.com/zng489/azure_blob_storage
+>>  * branch            main       -> FETCH_HEAD
+>> $ git add .
+>> $ git commit -m "message"
+>> $ git push branch_named master:main
+>> or
+>> $ git push --force branch_named master:main
+
+>> To clone
+>> $ git init
+>> $ git clone url
+
