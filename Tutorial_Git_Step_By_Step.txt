@@ -96,3 +96,10 @@ git push [origin] [master]:[main]
 >> $ git init
 >> $ git clone url
 
+>> git clone --branch branch-name --single-branch REPO_URL
+>> git clone https://github.com/usuario/repo.git
+>> cd repo
+>> git checkout minha-branch
+
+>> git clone --branch minha-branch --single-branch https://github.com/usuario/repo.git
+
