@@ -18,6 +18,49 @@
 
 # git push -u origin branch_testing
 
+######################################################################################
+
+>> From https://github.com/zng489/azure_blob_storage
+>>  * branch            main       -> FETCH_HEAD
+>> $ git add .
+>> $ git commit -m "message"
+>> $ git push branch_named master:main
+>> or
+>> $ git push --force branch_named master:main
+
+>> To clone
+>> $ git init
+>> $ git clone url
+
+
+git reset 8c1338744180ae68756b4f81cec0c599fba7f412
+
+# Interactive rebase to the commit before the one containing the secret
+git rebase -i 8c1338744180ae68756b4f81cec0c599fba7f412^
+
+remote:          - commit: 8c1338744180ae68756b4f81cec0c599fba7f412
+esc
+:wq 
+
+# This will open an editor. Change 'pick' to 'edit' for the commit containing the secret
+# Save and close the editor
+
+# Now remove the sensitive file from git history
+git rm --cached airflow_scheduler_webserver/dags/azure.py
+
+
+git log
+git revert aad850d0cb5129012949d51378254fb460dff62c 
+
+
+
+git log
+git reset --hard HEAD~1
+git log
+git status
+git add .
+git commit -m
+git push....
 
 
 
